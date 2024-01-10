@@ -1,0 +1,269 @@
+<web-app>
+
+   <!-- General description of your Web application -->
+  <display-name>
+    CNT 4714 Fall 2023 Servlet/JSP Home Page
+  </display-name>
+
+  <description>
+    This is the Web application for Project 4
+    in the class CNT 4714.
+  </description>
+
+  <!-- Servlet definitions and mappings  -->
+
+  <!-- Authentication -->
+  <servlet>
+    <servlet-name>authentication</servlet-name>
+    <description> Determines whether a user is authenticated or not </description>
+    <servlet-class> AuthenticationServlet </servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>authentication</servlet-name>
+    <url-pattern>/authentication</url-pattern>
+  </servlet-mapping>
+
+
+  <!-- Client -->
+  <servlet>
+    <servlet-name>client</servlet-name>
+    <description> Executes client's commands </description>
+    <servlet-class> ClientServlet </servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>client</servlet-name>
+    <url-pattern>/ClientUserApp</url-pattern>
+  </servlet-mapping>
+
+
+  <!-- Root -->
+  <servlet>
+    <servlet-name>root</servlet-name>
+    <description> Executes root's commands </description>
+    <servlet-class> RootServlet </servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>root</servlet-name>
+    <url-pattern>/RootUserApp</url-pattern>
+  </servlet-mapping>
+
+
+  <!-- Accountant -->
+  <servlet>
+    <servlet-name>accountant</servlet-name>
+    <description> Executes accountant's commands </description>
+    <servlet-class> AccountantServlet </servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>accountant</servlet-name>
+    <url-pattern>/AccountantUserApp</url-pattern>
+  </servlet-mapping>
+
+
+  <!-- Data Entry -->
+  <!-- Supplier -->
+  <servlet>
+    <servlet-name>supplier</servlet-name>
+    <description> Executes data user's supplier entry command</description>
+    <servlet-class> AddSupplierRecordServlet </servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>supplier</servlet-name>
+    <url-pattern>/SupplierUserApp</url-pattern>
+  </servlet-mapping> 
+
+  <!-- Part -->
+  <servlet>
+    <servlet-name>part</servlet-name>
+    <description> Executes data user's part entry command</description>
+    <servlet-class> AddPartRecordServlet </servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>part</servlet-name>
+    <url-pattern>/PartUserApp</url-pattern>
+  </servlet-mapping> 
+
+
+  <!-- Job -->
+  <servlet>
+    <servlet-name>job</servlet-name>
+    <description> Executes data user's job entry command</description>
+    <servlet-class> AddJobRecordServlet </servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>job</servlet-name>
+    <url-pattern>/JobUserApp</url-pattern>
+  </servlet-mapping> 
+
+
+  <!-- Shipment -->
+  <servlet>
+    <servlet-name>shipment</servlet-name>
+    <description> Executes data user's shipment entry command</description>
+    <servlet-class> AddShipmentRecordServlet </servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>shipment</servlet-name>
+    <url-pattern>/ShipmentUserApp</url-pattern>
+  </servlet-mapping> 
+
+
+  <!-- Other Servlet
+  <servlet>
+    <servlet-name>delta</servlet-name>
+    <description> A redirection/re-routing servlet </description>
+    <servlet-class> ReDirectionServlet  </servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>delta</servlet-name>
+    <url-pattern>/redirect</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+     <servlet-name>epsilon</servlet-name>
+     <description> A simple servlet that handles an HTTP get request. </description>
+     <servlet-class>CurrentTimeServlet </servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>epsilon</servlet-name>
+    <url-pattern>/currenttime</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>fourteen</servlet-name>
+    <description> A color preference survey servlet application
+    </description>
+    <servlet-class>
+      SurveyServlet
+    </servlet-class>
+    <init-param>
+      <param-name>databaseDriver</param-name>
+      <param-value>com.mysql.cj.jdbc.Driver</param-value>
+    </init-param>
+    <init-param>
+      <param-name>databaseName</param-name>
+      <param-value>jdbc:mysql://localhost:3306/colorsurvey</param-value>
+    </init-param>
+    <init-param>
+      <param-name>username</param-name>
+      <param-value>root</param-value>
+    </init-param>
+    <init-param>
+      <param-name>password</param-name>
+      <param-value>rootMAC1$</param-value>
+    </init-param>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>fourteen</servlet-name>
+    <url-pattern>/colorsurvey</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>trial</servlet-name>
+    <description>
+      A simple servlet that handles an HTTP get request.
+    </description>
+    <servlet-class> SurveyServlet  </servlet-class>
+  </servlet>
+
+	
+  <servlet>
+	<servlet-name>searcheng</servlet-name>
+	<servlet-class>searchEngine</servlet-class>
+  </servlet>
+
+
+  <servlet>
+    <servlet-name>cookies</servlet-name>
+    <servlet-class>RepeatVisitor</servlet-class>
+  </servlet> 
+   
+
+  <servlet>
+    <servlet-name>cookietest</servlet-name>
+    <servlet-class>CookieTest</servlet-class>
+  </servlet> 
+   
+  <servlet>
+    <servlet-name>cookieaccess</servlet-name>
+    <servlet-class>ClientAccessCounts</servlet-class>
+  </servlet> 
+
+  <servlet>
+    <servlet-name>sessions</servlet-name>
+    <servlet-class>ShowSession</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>spreadsheet</servlet-name>
+    <servlet-class>ApplesAndOranges</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>pictures</servlet-name>
+    <servlet-class>ImageContent</servlet-class>
+  </servlet>
+
+  -->
+
+
+   <!-- Servlet mappings -->
+  <!--
+  <servlet-mapping>
+    <servlet-name>trial</servlet-name>
+    <url-pattern>/trial</url-pattern>
+  </servlet-mapping>
+
+   
+  <servlet-mapping>
+  	<servlet-name>searcheng</servlet-name>
+   	<url-pattern>/searcheng</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>cookies</servlet-name>
+    <url-pattern>/cookies</url-pattern>
+  </servlet-mapping> 
+
+  <servlet-mapping>
+    <servlet-name>cookietest</servlet-name>
+    <url-pattern>/cookietest</url-pattern>
+  </servlet-mapping> 
+
+  <servlet-mapping>
+    <servlet-name>cookieaccess</servlet-name>
+    <url-pattern>/cookieaccess</url-pattern>
+  </servlet-mapping> 
+
+  <servlet-mapping>
+    <servlet-name>sessions</servlet-name>
+    <url-pattern>/sessions</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>spreadsheet</servlet-name>
+    <url-pattern>/spreadsheet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>pictures</servlet-name>
+    <url-pattern>/pictures</url-pattern>
+  </servlet-mapping>
+
+  -->
+
+</web-app>
